@@ -12,6 +12,7 @@ export class ConfigService {
   constructor(private http: HttpClient) {}
 
   loadConfig(): Promise<void> {
+    // 
       this.http.get('https://jsonplaceholder.typicode.com/users').subscribe(res => {
         console.log('loadConfig', res);
       });
